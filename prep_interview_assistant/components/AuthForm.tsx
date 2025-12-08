@@ -4,8 +4,10 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import Image from "next/image"
-
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 import {
   Form,
   FormControl,
@@ -15,8 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Link } from "lucide-react";
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
@@ -57,7 +57,8 @@ const AuthForm = ({type}: {type: FormType}) => {
           <Button className="btn" type="submit">{isSignIn ? "Sign in" : "Create an Account"}</Button>
         </form>
       </Form>
-      <p className="text-center">{isSignIn ? "No account yet?" : "Have an account already?"} 
+      <p className="text-center">
+        {isSignIn ? "No account yet?" : "Have an account already?"} 
         <Link href={!isSignIn ? '/sign-in' : '/sign-up'} className="font-bold text-user-primary ml-1">{!isSignIn ? "Sign in" : "Sign up"}</Link>
        </p>
     </div>
