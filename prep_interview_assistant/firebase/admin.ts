@@ -9,7 +9,7 @@ const initFirebaseAdmin =  () => {
         initializeApp({
             credential: cert({
                 projectId: process.env.FIREBASE_PROJECT_ID,
-                clientEmail: process.env.FIREBASE_CLEINT_EMAIL,
+                clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
                 privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n")
             })
         })
@@ -19,5 +19,7 @@ const initFirebaseAdmin =  () => {
         db: getFirestore()
     }
 }
+console.log("Firebase Admin Email:", process.env.FIREBASE_CLIENT_EMAIL);
+
 
 export const { auth, db } = initFirebaseAdmin();
