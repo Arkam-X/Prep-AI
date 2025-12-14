@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBmijxqQHsMWLuMSCZCb06TZ9U4zdulfCc",
+  apiKey: GOOGLE_GENERATIVE_AI_API_KEY,
   authDomain: "prepai-f5816.firebaseapp.com",
   projectId: "prepai-f5816",
   storageBucket: "prepai-f5816.firebasestorage.app",
