@@ -1,4 +1,4 @@
-# 🎙️ Talking AI Interviewer
+# 🎙️ Talking AI Interviewer - PrepAI
 
 The **Talking AI Interviewer** is a voice-based interview practice application where users interact with an AI interviewer through a real-time voice call. The system is designed to collect interview preferences conversationally and generate interview questions based on the user’s input.
 
